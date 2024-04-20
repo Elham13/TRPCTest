@@ -1,0 +1,11 @@
+{
+  "name": "trpctest",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC"
+}
