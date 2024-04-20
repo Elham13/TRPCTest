@@ -3,8 +3,6 @@ import express from "express";
 
 const app = express();
 
-let a = 1;
-a = "1";
 app.use(express.json());
 app.use(cors());
 
