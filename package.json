@@ -4,8 +4,28 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": ""
+    "dev": "npx nx run-many --target=dev",
+    "build": "npx nx run-many --target=build",
+    "tsc": "npx nx run-many --target=tsc",
+    "prepare": "husky install"
   },
-  "author": "",
-  "license": "ISC"
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "author": "Elhamuddin Mahmoodi",
+  "license": "ISC",
+  "devDependencies": {
+    "@nx/eslint": "18.3.3",
+    "@nx/next": "18.3.3",
+    "eslint": "~8.57.0",
+    "nx": "18.3.3",
+    "typescript": "^5.4.5",
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
 }
