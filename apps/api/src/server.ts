@@ -1,7 +1,13 @@
+import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
+import connectDB from "./config/db";
+
+dotenv.config({ path: "../." });
 
 const app = express();
+
+connectDB();
 
 app.use(express.json());
 app.use(cors());

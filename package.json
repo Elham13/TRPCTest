@@ -7,6 +7,7 @@
     "dev": "npx nx run-many --target=dev",
     "build": "npx nx run-many --target=build",
     "tsc": "npx nx run-many --target=tsc",
+    "validate": "npm run tsc && npm run build",
     "prepare": "husky install"
   },
   "workspaces": [
