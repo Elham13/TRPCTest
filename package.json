@@ -10,10 +10,6 @@
     "validate": "npm run tsc && npm run build",
     "prepare": "husky install"
   },
-  "workspaces": [
-    "apps/*",
-    "libs/*"
-  ],
   "author": "Elhamuddin Mahmoodi",
   "license": "ISC",
   "devDependencies": {

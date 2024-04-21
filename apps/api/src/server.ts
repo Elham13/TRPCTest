@@ -1,4 +1,4 @@
-import dotenv from "dotenv";
+import "dotenv/config";
 import cors from "cors";
 import express, { Express, Request, Response } from "express";
 import cookieParser from "cookie-parser";
@@ -6,8 +6,6 @@ import morgan from "morgan";
 import connectDB from "./config/db";
 import allRoutes from "./routes";
 import errorHandler from "./middlewares/errorHandler";
-
-dotenv.config({ path: "../." });
 
 const app: Express = express();
 
