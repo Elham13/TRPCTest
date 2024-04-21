@@ -1,4 +1,4 @@
-import { UserInReq } from "./utils/types/index";
+import { UserInReq } from "./src/utils/types/index";
 
 declare module "express-serve-static-core" {
   interface Request {
