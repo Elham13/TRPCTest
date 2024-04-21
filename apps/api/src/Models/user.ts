@@ -1,7 +1,11 @@
-import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
+import * as bcrypt from "bcryptjs";
+import { IUser } from "@root/libs/types/collections/user";
+import { Document, model, models } from "mongoose";
+import { Schema } from "mongoose";
 
-const Schema = new mongoose.Schema(
+interface IUserSchema extends Omit<IUser, "_id">, Document {}
+
+const UserSchema = new Schema<IUserSchema>(
   {
     name: {
       type: String,
@@ -34,7 +38,7 @@ const Schema = new mongoose.Schema(
 );
 
 // Hash the password before saving it
-Schema.pre("save", function (next) {
+UserSchema.pre("save", function (next) {
   if (!this.isModified("password")) {
     return next();
   }
@@ -51,6 +55,6 @@ Schema.pre("save", function (next) {
   });
 });
 
-const User = mongoose.models.User || mongoose.model("User", Schema);
+const User = models.User || model<IUserSchema>("User", UserSchema);
 
 export default User;

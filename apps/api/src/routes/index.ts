@@ -3,6 +3,7 @@ import userRoutes from "./userRoutes";
 import { asyncHandler } from "../utils/helpers";
 import clientRoutes from "./clientRoutes";
 import expenseRoutes from "./expenseRoutes";
+import wpSales from "./wp/sales";
 
 const allRoutes = Router();
 
@@ -19,5 +20,6 @@ allRoutes.get(
 allRoutes.use("/user", userRoutes);
 allRoutes.use("/client", clientRoutes);
 allRoutes.use("/expense", expenseRoutes);
+allRoutes.use("/wp/sales", wpSales);
 
 export default allRoutes;

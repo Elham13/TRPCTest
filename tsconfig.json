@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "CommonJS",
-    "strict": true
+    "strict": true,
+    "composite": true,
+    "paths": {
+      "@root/*": ["./*"]
+    }
   },
   "exclude": ["node_modules"]
 }
